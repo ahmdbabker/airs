@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<html dir="rtl">
+
+    <!--top nav start-->
+        <div class="top-nav">
+            <div class="container">
+                <div class="all-nav">
+                    <div class="logo">
+                        <h1>أحمد<span>إيـر</span></h1>
+                    </div>
+                    <i class="fas fa-bars menu" id="click"></i>
+                    <ul class="links" id="menu">
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">حجز رحلة</a></li>
+                        <li><a href="#">جدول الرحلات</a></li>
+                        <li><a href="#">الوجهات</a></li>
+                        <li><a href="#">المساعده</a></li>
+                        <div class="sign">
+                            <a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i>دخول</a>
+                            <a href="#"><i class="fa-solid fa-user-plus"></i>إنضم إلينا</a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <!--top nav end-->
+
+    <!---togle travel tabs start-->
+
+        <div class="tabs">
+            <div class="container">
+                <div class="two-sides">
+                    <div class="top-taps">
+                        <button class="actiive" data-cont=".one"><i class="fa-solid fa-plane"></i>تذاكر السفر</button>
+                        <button data-cont=".two"><i class="fa-solid fa-bed"></i>الفنادق</button>
+                        <button data-cont=".three"><i class="fa-solid fa-car"></i>السيارات</button>
+                    </div>
+                    <div class="tab-content">
+
+                        <div class="one">
+
+                            <div class="forma">
+                            <input type="radio" id="one" name="direc" value="ذهاب فقط">
+                            <label for="html">ذهاب فقط</label><br>
+                            <input type="radio" id="round" name="direc" value="ذهاب وإياب">
+                            <label for="css">ذهاب وعودة</label><br>
+                            <input type="radio" id="all" name="direc" value="وجهات متعددة">
+                            <label for="javascript">وجهات متعددة</label>
+                            </div>
+
+                            <div class="inputs">
+                                <label>مسافر من</label>
+                                <input type="text" placeholder="AUH">
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                <label>مسافر إلى</label>
+                                <input type="text" placeholder="إلى">
+                                <a href="#">البحث عن رحلات</a>
+                            </div>
+
+                            <p class="info"><i class="fa-solid fa-info"></i><span>ملاحظة مهمه:</span>توجيهات وقيود خاصة بفايروس كورونا المستجد (كوفيد-19) تتعلق بوجهة سفرك</p>
+                        </div> <!--end one-->
+
+                        <div class="two">
+                            <div class="form">
+                                <label>من</label>
+                                <input type="text" placeholder="ما البلد الضي تريد السفر منه؟">
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                <label>إلى</label>
+                                <input type="text" placeholder="ما البلد الضي تريد السفر إليه؟">
+                                <label>المغادرة</label>
+                                <input type="date">
+                                <label>الذهاب والعودة</label>
+                                <input type="date">
+                                <label>درجة الضيف</label>
+                                <select id="rate">
+                                    <option value="visit">الدرجة السياحية</option>
+                                    <option value="first">الدرجة الاولى</option>
+                                    <option value="vip">درجة رجال الاعمال</option>
+                                </select>
+                                <a href="#">بحث عن العروض</a>
+                            </div>
+                        </div> <!--end content two-->
+                        <div class="three">
+                            <div class="las-form">
+                                <label>موقع تحميل الركاب</label>
+                                <input type="text" placeholder="يرجى تحديد مدينة تحميل الركاب">
+                                <label>تاريخ تحميل الركاب</label>
+                                <input type="date">
+                                <label>وقت تحميل الركاب</label>
+                                <input type="time">
+                                <label>تاريخ تنزيل الركاب</label>
+                                <input type="date">
+                                <label>وقت تنزل الركاب</label>
+                                <input type="time"><br>
+                                <input type="radio" id="one" name="direc" value="مكان مختلف" class="cir">
+                                <label for="html">يرجى الضغط هنا لتوصيلك لمكان مختلف</label><br>
+                                <input type="radio" id="round" name="direc" value="عمر السائق" class="cir">
+                                <label for="css">عمر السائق بين 30-65 سنه</label><br>
+
+                                <a href="#">بحث عن تأجير السيارات</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!---togle travel tabs end-->
+
+    <div class="slider">
+        <div class="container">
+            <div class="sl-title">
+                <small>جديد طيراننا</small>
+                <h2>إكتشف أسطول طائراتنا <br>الجديد القادم</h2>
+            </div>
+            <div class="all-imgs">
+                <div class="item">
+                    <img src="cover.webp">
+                    <div class="layer-content">
+                        <h3>أحصل على ميزة معتمدة للسفر</h3>
+                        <p>حمل وثائق سفرك  الخاصه بكوفيد-19  واستفد من خدمة المسار السريع للوصوصل الى مكاتبنا المخصصخ لميزة معتمد السفر في المطمار</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="cover1.webp">
+                    <div class="layer-content">
+                        <h3>أحصل على ميزة معتمدة للسفر</h3>
+                        <p>حمل وثائق سفرك  الخاصه بكوفيد-19  واستفد من خدمة المسار السريع للوصوصل الى مكاتبنا المخصصخ لميزة معتمد السفر في المطمار</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="cover3.webp">
+                    <div class="layer-contentt">
+                        <h3>أحصل على ميزة معتمدة للسفر</h3>
+                        <p>حمل وثائق سفرك  الخاصه بكوفيد-19  واستفد من خدمة المسار السريع للوصوصل الى مكاتبنا المخصصخ لميزة معتمد السفر في المطمار</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--select icons start-->
+
+    <div class="select">
+        <div class="container">
+            <div class="all-itm">
+                <div class="itm">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>إدارة الحجز</span>
+                </div>
+                <div class="itm">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <span>إتمام إجراءات السفر</span>
+                </div>
+                <div class="itm">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>حالة الرحلة</span>
+                </div>
+                <div class="itm">
+                    <i class="fa-solid fa-suitcase"></i>
+                    <span>دليل الأمتعة </span>
+                </div>
+                <div class="itm">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    <span>ترقية درجة السفر </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--select icons start-->
+
+    <!--deals start--->
+        <div class="deals">
+            <div class="container">
+                <div class="deal-title">
+                    <small>عروض من أبوظبي</small>
+                    <h2>أسعار تذاكر الذهاب والإياب تشمل<br>الضرائب والرسوم الاضافيه</h2>
+                </div>
+                <a href="#"><i class="fa-solid fa-arrow-left"></i>إطلع على أحدث العروض المتاحه</a>
+                <div class="slicks">
+                    <div class="sl-item">
+                        <div class="image">
+                        <img src="deals1.webp">
+                        </div>
+                        <div class="detail">
+                            <p>أبوظبي إلى</p>
+                            <span class="uni">جنيف</span><br>
+                            <small>الأعمال</small><br>
+                            <span class="unii">إججز بتاريخ 29 أبريل 2022</span>
+                            <div class="price">
+                                <h2><span>سعر يبدأ من </span>13,999 AED</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sl-item">
+                        <div class="image">
+                        <img src="deals5.webp">
+                        </div>
+                        <div class="detail">
+                            <p>أبوظبي إلى</p>
+                            <span class="uni">كندا</span><br>
+                            <small>الأعمال</small><br>
+                            <span class="unii">إججز بتاريخ 29 أبريل 2022</span>
+                            <div class="price">
+                                <h2><span>سعر يبدأ من </span>10,999 AED</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sl-item">
+                        <div class="image">
+                        <img src="deal.webp">
+                        </div>
+                        <div class="detail">
+                            <p>أبوظبي إلى</p>
+                            <span class="uni">بومباي سيتي</span><br>
+                            <small>الأعمال</small><br>
+                            <span class="unii">إججز بتاريخ 29 أبريل 2022</span>
+                            <div class="price">
+                                <h2><span>سعر يبدأ من </span>9,999 AED</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sl-item">
+                        <div class="image">
+                        <img src="deal3.jpg">
+                        </div>
+                        <div class="detail">
+                            <p>أبوظبي إلى</p>
+                            <span class="uni">أديس أبابا</span><br>
+                            <small>الأعمال</small><br>
+                            <span class="unii">إججز بتاريخ 29 أبريل 2022</span>
+                            <div class="price">
+                                <h2><span>سعر يبدأ من </span>9,999 AED</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sl-item">
+                        <div class="image">
+                        <img src="deal4.webp">
+                        </div>
+                        <div class="detail">
+                            <p>أبوظبي إلى</p>
+                            <span class="uni">نيو يورك</span><br>
+                            <small>الأعمال</small><br>
+                            <span class="unii">إججز بتاريخ 29 أبريل 2022</span>
+                            <div class="price">
+                                <h2><span>سعر يبدأ من </span>9,999 AED</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--deals end--->
+
+    <!-- start footer-->   
+        <div class="footer">
+            <div class="container">
+                <div class="all-footers">
+                    <div class="foot-item">
+                        <h1>أحمد<span>إير</span></h1>
+                        <span><i class="fa-solid fa-location-dot"></i>الامارات,العين</span><br>
+                        <span><i class="fa-solid fa-reply-all"></i>ahd.bkr19999@gmail.com</span><br>
+                        <span><i class="fa-solid fa-phone"></i>971556141991+</span><br>
+                    </div>
+                    <div class="foot-item">
+                        <h2>نتطلع لسماع ارائكم</h2>
+                        <div class="message">
+                        <input type="text" placeholder="أرسل رساله">
+                        <div class="btn"><a href="#">إرسال</a></div>
+                        </div>
+                    </div>
+                    <div class="foot-item icn">
+                        <h3>يسعدنا أن تبقى على تواصل معنا</h3>
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                        <span><i class="fa-brands fa-whatsapp"></i></span>
+                        <span><i class="fa-brands fa-github"></i></span>
+                        <span><i class="fa-brands fa-linkedin-in"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <!--end footer-->
+     
+
+
+
+    <!--javascript files start--------->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="slick.min.js"></script>
+    <script>
+        $('.all-imgs').slick({
+        autoplay:1000,
+        prevArrow:'<span class="next_arrow"><i class="fa-solid fa-arrow-left"></i></span>',
+        nextArrow:'<span class="priv_arrow"><i class="fa-solid fa-arrow-right"></i></span>',
+        });
+    </script>
+
+    <script>
+        $('.slicks').slick({
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow:'<span class="next_arrow"><i class="fa-solid fa-arrow-left"></i></span>',
+        nextArrow:'<span class="priv_arrow"><i class="fa-solid fa-arrow-right"></i></span>',
+        responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1.5,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+         ]
+        });
+        
+    </script>
+
+    <script>
+    
+        let togle = document.getElementById("click")
+        let men = document.getElementById("menu")
+
+        togle.addEventListener("click" , function(){
+            men.classList.toggle("active")
+        })        
+    </script>
+
+    <script>
+        let tabs = document.querySelectorAll(".top-taps button");
+        let tabArray = Array.from(tabs);
+        let content = document.querySelectorAll(".tab-content > div");
+        let contentArray = Array.from(content);
+
+        tabArray.forEach((tab) =>{
+            tab.addEventListener("click",function(e){
+                tabArray.forEach((tab) => {
+                    tab.classList.remove("actiive");
+                });
+                e.currentTarget.classList.add("actiive")
+                contentArray.forEach((div) =>{
+                    div.style.display = "none";
+                })
+                document.querySelector(e.currentTarget.dataset.cont).style.display = "block"
+            });
+        });
+    </script>
+</body>
+</html>
